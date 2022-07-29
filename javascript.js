@@ -1,4 +1,6 @@
 let color = "black";
+let penStatus = "off";
+
 
 let changeSize = function (input) {
     if(input >= 2 && input <= 100){
@@ -9,15 +11,7 @@ let changeSize = function (input) {
 }
 
 
-let squareColor = function () {
-    if (color === 'random') {
-        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
 
-
-    } else {
-        this.style.backgroundColor = color;
-    }
-}
 
 let makeGrid = function (size) {
     const mainBox = document.querySelector(".mainBox");
@@ -27,9 +21,13 @@ let makeGrid = function (size) {
     mainBox.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
     let amount = size * size;
+
+   
     
     for (let i = 0; i < amount; i++) {
         const square = document.createElement("div");
+        square.addEventListener('mousedown', togglePenON);
+        square.addEventListener('mouseup', togglePenOFF);
         square.addEventListener('mouseover', squareColor);
         square.classList.add("drawBox");
         mainBox.appendChild(square)
@@ -46,6 +44,33 @@ let resetGrid = function () {
     squares.forEach((div) => div.style.backgroundColor = "white");
 }
 
+let togglePenON = function () {
+    penStatus = "on"
+    console.log (penStatus)
+}
+
+let togglePenOFF = function () {
+    penStatus = "off"
+    console.log (penStatus)
+}
+
+
+
+let squareColor = function () {
+    if (penStatus === "on") {
+        if (color === 'random') {
+            this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        } else if (color === 'colorChoice') {
+            color = document.getElementById('colorInputColor').value;
+            this.style.backgroundColor = color;
+        }
+        else {
+            this.style.backgroundColor = color;
+        }
+    }  else {
+        return;
+    }
+}
 
 
 
