@@ -13,6 +13,7 @@ let changeSize = function (input) {
 
 
 
+
 let makeGrid = function (size) {
     const mainBox = document.querySelector(".mainBox");
     const squares = mainBox.querySelectorAll("div");
