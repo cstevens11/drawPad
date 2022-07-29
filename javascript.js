@@ -60,10 +60,11 @@ let squareColor = function () {
     if (penStatus === "on") {
         if (color === 'random') {
             this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-        } else if (color === 'colorChoice') {
-            color = document.getElementById('colorInputColor').value;
-            this.style.backgroundColor = color;
-        }
+        } 
+        // else if (color === 'colorChoice') {
+        //     color = document.getElementById('colorInputColor').value;
+        //     this.style.backgroundColor = color;
+        // }
         else {
             this.style.backgroundColor = color;
         }

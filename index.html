@@ -14,8 +14,11 @@
         <div class = "content">
             <div class = "mainBox"></div>
             <div class = "contentButtons">
-                <input type = color id="colorInputColor">
-                <button onclick="changeColor('colorChoice')">Click to Update Color Choice</button>
+                <input 
+                type = color 
+                id="colorInputColor" 
+                onchange="changeColor(this.value)"
+                >
                 <button onclick="changeColor('black')">Black</button>
                 <button onclick="changeColor('whitesmoke')">Eraser</button>
                 <button onclick="changeColor('random')">Random</button>
