@@ -1,3 +1,7 @@
+body {
+    background-color: rgb(219, 211, 136);
+}
+
 .cursor {
     margin: 0;
     height: 100vh;
