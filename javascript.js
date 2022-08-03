@@ -1,6 +1,6 @@
 let color = "black";
 let penStatus = false;
-let colorMatchMode = "off";
+let colorMatchMode = false;
 
 const sliderValue = document.querySelector(".sliderValue");
 
@@ -81,11 +81,11 @@ let togglePenOFF = function (evt) {
 }
 
 let copyColorON = function () {
-    colorMatchMode = "on"
+    colorMatchMode = true;
 }
 
 let copyColorOFF = function () {
-    colorMatchMode = "off"
+    colorMatchMode = false;
 }
 
 // let cursorCheck = function () {
@@ -108,7 +108,7 @@ let colorMatch = function () {
 
 let copyColor = function (evt) {
     evt.preventDefault();
-    if (colorMatchMode === "on") {
+    if (colorMatchMode === true) {
         changeColor(this.style.backgroundColor);
         copyColorOFF();
         const cursor = document.querySelector(".cursor");
@@ -119,6 +119,7 @@ let copyColor = function (evt) {
 
 let squareColor = function (evt) {
     evt.preventDefault();
+    if (colorMatchMode === true) return;
     if (evt.type === 'mouseover' && !penStatus) return;
     // if (penStatus === "on") {
     if (color === 'random') {
