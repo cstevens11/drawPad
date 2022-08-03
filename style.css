@@ -1,3 +1,10 @@
+.cursor {
+    margin: 0;
+    height: 100vh;
+    cursor: default;
+}
+
+
 .mainBox {
     width: 500px;
     height: 500px;
@@ -16,3 +23,14 @@
     width: auto;
 }
 
+.currentPenColor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background: black
+    
+}

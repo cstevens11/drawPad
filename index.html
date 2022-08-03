@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Drawing Pad</title>
 </head>
-<body>
+<body class = "cursor">
     <div class = "page-container">
         <div class = "title">Drawing Pad</div>
         <div class = "content">
@@ -22,6 +22,7 @@
                 <button onclick="changeColor('black')">Black</button>
                 <button onclick="changeColor('whitesmoke')">Eraser</button>
                 <button onclick="changeColor('random')">Random</button>
+                <button onclick="colorMatch()">Color Match</button>
                 <button onclick="resetGrid()">Reset</button>
             </div>
             <div class="slidecontainer">
@@ -34,6 +35,10 @@
                 >
                 <div class="sliderValue">
                     Grid Size: 16 x 16
+                </div>
+                <div class="colorTracker">
+                    <div class="currentPenColor"></div>
+                    <div>Current Color</div>
                 </div>
             </div>
         </div>
