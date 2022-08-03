@@ -1,6 +1,9 @@
 let color = "black";
 let penStatus = "off";
 
+const sliderValue = document.querySelector(".sliderValue");
+
+
 
 let changeSize = function (input) {
     if(input >= 2 && input <= 100){
@@ -74,6 +77,9 @@ let squareColor = function () {
     }
 }
 
+let liveSliderValue = function (value) {
+    sliderValue.textContent = `Grid Size: ${value} x ${value}`;
+}
 
 
 
