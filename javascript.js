@@ -33,7 +33,7 @@ let makeGrid = function (size) {
         const square = document.createElement("div");
         square.addEventListener('mousedown', togglePenON);
         square.addEventListener('mouseup', togglePenOFF);
-        square.addEventListener('mouseover', squareColor);
+        square.addEventListener('mousemove', squareColor);
         square.addEventListener('click', copyColor);
 
         square.classList.add("drawBox");
