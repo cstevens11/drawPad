@@ -1,5 +1,5 @@
 let color = "black";
-let penStatus = "off";
+let penStatus = false;
 let colorMatchMode = "off";
 
 const sliderValue = document.querySelector(".sliderValue");
@@ -15,6 +15,8 @@ let changeSize = function (input) {
 }
 
 
+document.body.onmousedown = () => (penStatus = true)
+document.body.onmouseup = () => (penStatus = false)
 
 
 
@@ -31,9 +33,10 @@ let makeGrid = function (size) {
     
     for (let i = 0; i < amount; i++) {
         const square = document.createElement("div");
-        square.addEventListener('mousedown', togglePenON);
-        square.addEventListener('mouseup', togglePenOFF);
-        square.addEventListener('mousemove', squareColor);
+        // square.addEventListener('mousedown', togglePenON);
+        // square.addEventListener('mouseup', togglePenOFF);
+        square.addEventListener('mouseover', squareColor);
+        square.addEventListener('mousedown', squareColor);
         square.addEventListener('click', copyColor);
 
         square.classList.add("drawBox");
@@ -65,14 +68,16 @@ let resetGrid = function () {
     squares.forEach((div) => div.style.backgroundColor = "white");
 }
 
-let togglePenON = function () {
-    penStatus = "on"
-    console.log (penStatus)
+let togglePenON = function (evt) {
+    evt.preventDefault();
+    penStatus = true;
+    console.log (penStatus);
 }
 
-let togglePenOFF = function () {
-    penStatus = "off"
-    console.log (penStatus)
+let togglePenOFF = function (evt) {
+    evt.preventDefault();
+    penStatus = false;
+    console.log (penStatus);
 }
 
 let copyColorON = function () {
@@ -101,7 +106,8 @@ let colorMatch = function () {
 
 }
 
-let copyColor = function () {
+let copyColor = function (evt) {
+    evt.preventDefault();
     if (colorMatchMode === "on") {
         changeColor(this.style.backgroundColor);
         copyColorOFF();
@@ -111,21 +117,21 @@ let copyColor = function () {
 }
 
 
-let squareColor = function () {
-    if (penStatus === "on") {
-        if (color === 'random') {
-            this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-        } 
+let squareColor = function (evt) {
+    evt.preventDefault();
+    if (evt.type === 'mouseover' && !penStatus) return;
+    // if (penStatus === "on") {
+    if (color === 'random') {
+        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    } 
         // else if (color === 'colorChoice') {
         //     color = document.getElementById('colorInputColor').value;
         //     this.style.backgroundColor = color;
         // }
-        else {
-            this.style.backgroundColor = color;
-        }
-    } else {
-        return;
+    else {
+        this.style.backgroundColor = color;
     }
+    
 }
 
 let liveSliderValue = function (value) {
