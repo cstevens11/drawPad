@@ -6,6 +6,7 @@ const sliderValue = document.querySelector(".sliderValue");
 
 
 
+
 let changeSize = function (input) {
     if(input >= 2 && input <= 100){
         makeGrid(input);
@@ -38,15 +39,15 @@ let makeGrid = function (size) {
         square.addEventListener('mouseover', squareColor);
         square.addEventListener('mousedown', squareColor);
         square.addEventListener('click', copyColor);
-
         square.classList.add("drawBox");
+        square.style.backgroundColor = "whitesmoke"
         mainBox.appendChild(square)
     }
 };
 
 let changeColor = function (choice) {
     color = choice;
-    updateCurrentColor();
+    updateCurrentColor(choice);
 }
 
 let updateCurrentColor = function () {
@@ -65,7 +66,7 @@ let updateCurrentColor = function () {
 let resetGrid = function () {
     const mainBox = document.querySelector(".mainBox");
     const squares = mainBox.querySelectorAll("div");
-    squares.forEach((div) => div.style.backgroundColor = "white");
+    squares.forEach((div) => div.style.backgroundColor = "whitesmoke");
 }
 
 let togglePenON = function (evt) {
