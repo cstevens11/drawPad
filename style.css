@@ -49,29 +49,128 @@ body {
     display: flex;
     justify-content: center;
     background-color: aquamarine;
+    gap: 10px;
 }
 
 .settingsColumn {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
     background-color: blueviolet;
+    /* padding: 18px; */
+    border: solid black 18px;
+    width: 150px;
+    gap: 5px;
 
 }
 
 .colorTracker {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    background-color: lightcoral;
+    width: 90px;
+    border: outset 3px rgb(129, 128, 35);
+
+
+}
+
+.slideContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 4px; */
+    background-color: yellow;
+    width: 142px;
+    border: outset 3px rgb(129, 128, 35);
+
+}
+
+
+.sliderBox {
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+}
+
+.sliderValue {
+    display: flex;
+    justify-content: center;
 
 }
 
 .contentButtons {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: lightblue;
+    flex: 1;
 }
 
-.slideContainer {
+.customColor {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    background-color: rgb(240, 64, 64);
+    padding: 5px 5px 0px 5px;
+    width: 80px;
+    /* height: 50px; */
+    border: outset 3px rgb(129, 128, 35);
+
 }
+
+.customValue {
+    display: flex;
+}
+
+#colorInputColor {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    width: 94px;
+    height: 50px;
+    border: none;
+    margin-top: -8px;
+    margin-bottom: -6px;
+    cursor: pointer;
+}
+
+#colorInputColor::-webkit-color-swatch {
+    border-radius: 0px;
+    border: inset 3px rgb(129, 128, 35);
+    
+}
+
+#colorInputColor::-moz-color-swatch {
+    border-radius: 0px;
+    border: inset 3px rgb(129, 128, 35);
+}
+
+.customLabel {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    width: 90px;
+
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    width: 96px;
+    border: outset 3px rgb(129, 128, 35);
+
+    
+}
+
+/* .shadow {
+    border: outset 3px rgb(129, 128, 35);
+} */

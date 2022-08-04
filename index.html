@@ -17,29 +17,37 @@
                     <div class="currentPenColor"></div>
                     <div>Current Color</div>
                 </div>
-                <div class="slidecontainer">
-                    <input 
-                    type="range" 
-                    min="2" max="99" value="16" 
-                    class="slider" id="sizeSlider"
-                    onchange="changeSize(this.value)"
-                    oninput="liveSliderValue(this.value)"
-                    >
+                <div class="slideContainer">
+                    <div class="sliderBox">
+                        <input 
+                        type="range" 
+                        min="2" max="99" value="16" 
+                        class="slider" id="sizeSlider"
+                        onchange="changeSize(this.value)"
+                        oninput="liveSliderValue(this.value)"
+                        >
+                    </div>
                     <div class="sliderValue">
                         Grid Size: 16 x 16
                     </div>
                 </div>
-                <div class = "contentButtons">
+                <div class="customColor">
                     <input 
                     type = color 
                     id="colorInputColor" 
+                    class="customValue"
                     onclick="changeColor(this.value)"
                     onchange="changeColor(this.value)"
                     >
+                    <label for="colorInputColor" class="customLabel">
+                    Custom
+                    </label> 
+                </div>
+                <div class = "contentButtons">
                     <button onclick="changeColor('black')">Black</button>
-                    <button onclick="changeColor('whitesmoke')">Eraser</button>
                     <button onclick="changeColor('random')">Random</button>
                     <button onclick="colorMatch()">Color Match</button>
+                    <button onclick="changeColor('whitesmoke')">Eraser</button>
                     <button onclick="resetGrid()">Reset</button>
                 </div>
             </div>
