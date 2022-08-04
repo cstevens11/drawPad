@@ -48,17 +48,22 @@ body {
 .content {
     display: flex;
     justify-content: center;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     gap: 10px;
 }
+
+/* #e5db7e */
+
 
 .settingsColumn {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: blueviolet;
-    /* padding: 18px; */
-    border: solid black 18px;
+    /* background-color: blueviolet; */
+    background-color:  rgb(226, 217, 117);
+    padding: 18px;
+    border: outset 3px rgb(129, 128, 35);
+    /* border: solid black 18px; */
     width: 150px;
     gap: 5px;
 
@@ -68,7 +73,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: lightcoral;
+    /* background-color: lightcoral; */
+    background-color:  rgb(201, 190, 92);
+    padding: 5px;
     width: 90px;
     border: outset 3px rgb(129, 128, 35);
 
@@ -80,7 +87,8 @@ body {
     flex-direction: column;
     align-items: center;
     /* padding: 4px; */
-    background-color: yellow;
+    /* background-color: yellow; */
+    background-color:  rgb(201, 190, 92);
     width: 142px;
     border: outset 3px rgb(129, 128, 35);
 
@@ -102,6 +110,7 @@ body {
 .sliderValue {
     display: flex;
     justify-content: center;
+    margin-top: -5px;
 
 }
 
@@ -110,7 +119,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-color: lightblue;
+    /* background-color: lightblue; */
     flex: 1;
 }
 
@@ -118,7 +127,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(240, 64, 64);
+    /* background-color: rgb(240, 64, 64); */
+    background-color:  rgb(201, 190, 92);
     padding: 5px 5px 0px 5px;
     width: 80px;
     /* height: 50px; */
@@ -166,6 +176,7 @@ button {
     display: flex;
     justify-content: center;
     width: 96px;
+    background-color:  rgb(201, 190, 92);
     border: outset 3px rgb(129, 128, 35);
 
     
