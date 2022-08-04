@@ -20,7 +20,8 @@ body {
     width: 500px;
     height: 500px;
     display: grid;
-    border: solid rgb(110, 88, 88) 4px;
+    border: outset 4px rgb(129, 128, 35);
+
     /* grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr); */
     /* gap: 5px; */
