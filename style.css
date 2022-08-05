@@ -87,11 +87,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 5px;
     /* padding: 4px; */
     /* background-color: yellow; */
     background-color:  rgb(201, 190, 92);
     width: 142px;
     border: outset 3px rgb(129, 128, 35);
+    /* gap: 5px; */
+
 
 }
 
@@ -152,14 +155,7 @@ body {
 
 
 
-.contentButtons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    /* background-color: lightblue; */
-    flex: 1;
-}
+
 
 .customColor {
     display: flex;
@@ -169,6 +165,7 @@ body {
     background-color:  rgb(201, 190, 92);
     padding: 5px 5px 0px 5px;
     width: 80px;
+    margin-top: 5px;
     /* height: 50px; */
     border: outset 3px rgb(129, 128, 35);
 
@@ -184,7 +181,7 @@ body {
     appearance: none;
     background: none;
     width: 92px;
-    height: 48px;
+    height: 43px;
     border: none;
     margin-top: -7px;
     margin-bottom: -6px;
@@ -210,10 +207,24 @@ body {
 
 }
 
+.contentButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    gap: 15px;
+    /* justify-content: space-around; */
+    /* background-color: lightblue; */
+    flex: 1;
+}
+
 button {
     display: flex;
     justify-content: center;
+    align-items: center;
+    font-size: 14px;
     width: 96px;
+    height: 30px;
     background-color:  rgb(201, 190, 92);
     border: outset 3px rgb(129, 128, 35);
 
