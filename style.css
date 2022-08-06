@@ -43,7 +43,9 @@ body {
     width: 80px;
     border: 2px solid black;
     border-radius: 50%;
-    background: black;    
+    background: black;   
+    font-size: 20px; 
+
 }
 
 .content {
@@ -79,6 +81,7 @@ body {
     padding: 5px;
     width: 90px;
     border: outset 3px rgb(129, 128, 35);
+
 
 
 }
@@ -226,8 +229,6 @@ button {
     height: 30px;
     background-color:  rgb(201, 190, 92);
     border: outset 3px rgb(129, 128, 35);
-
-    
 }
 
 
