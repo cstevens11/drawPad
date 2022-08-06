@@ -142,6 +142,7 @@ body {
     /* margin-top: -5px; */
     background:  rgb(165, 155, 68);
     
+    
 
 }
 
@@ -185,7 +186,6 @@ body {
     border: none;
     margin-top: -7px;
     margin-bottom: -6px;
-    cursor: pointer;
 }
 
 #colorInputColor::-webkit-color-swatch {
@@ -202,7 +202,6 @@ body {
 .customLabel {
     display: flex;
     justify-content: center;
-    cursor: pointer;
     width: 90px;
 
 }
@@ -229,6 +228,11 @@ button {
     border: outset 3px rgb(129, 128, 35);
 
     
+}
+
+
+button:hover, .customColor:hover {
+    background-color: rgb(175, 163, 56);
 }
 
 /* .shadow {
