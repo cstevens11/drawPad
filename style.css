@@ -15,22 +15,31 @@ body {
     font-size: 48px;
 }
 
-
-
-
-.drawPad {
-    width: 500px;
-    height: 500px;
-    display: grid;
-    border: outset 4px rgb(129, 128, 35);
+.content {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
-.drawBox {
+.settingsColumn {
     display: flex;
-    background-color: whitesmoke;
-    border: 1px rgba(0, 0, 0, 0.09) solid;
-    height: auto;
-    width: auto;
+    flex-direction: column;
+    align-items: center;
+    background-color:  rgb(226, 217, 117);
+    padding: 18px;
+    border: outset 3px rgb(129, 128, 35);
+    width: 150px;
+    gap: 5px;
+}
+
+.colorTracker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:  rgb(201, 190, 92);
+    padding: 5px;
+    width: 90px;
+    border: outset 3px rgb(129, 128, 35);
 }
 
 .currentPenColor {
@@ -43,45 +52,6 @@ body {
     border-radius: 50%;
     background: black;   
     font-size: 20px; 
-
-}
-
-.content {
-    display: flex;
-    justify-content: center;
-    /* background-color: aquamarine; */
-    gap: 10px;
-}
-
-/* #e5db7e */
-
-
-.settingsColumn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* background-color: blueviolet; */
-    background-color:  rgb(226, 217, 117);
-    padding: 18px;
-    border: outset 3px rgb(129, 128, 35);
-    /* border: solid black 18px; */
-    width: 150px;
-    gap: 5px;
-
-}
-
-.colorTracker {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* background-color: lightcoral; */
-    background-color:  rgb(201, 190, 92);
-    padding: 5px;
-    width: 90px;
-    border: outset 3px rgb(129, 128, 35);
-
-
-
 }
 
 .slideContainer {
@@ -89,24 +59,16 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top: 5px;
-    /* padding: 4px; */
-    /* background-color: yellow; */
     background-color:  rgb(201, 190, 92);
     width: 142px;
     border: outset 3px rgb(129, 128, 35);
-    /* gap: 5px; */
-
-
 }
-
 
 .sliderBox {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 4px;
-    /* position: relative; */
-
 }
 
 .slider {
@@ -127,7 +89,6 @@ body {
     height: 8px;
     width: 130px;
     border: inset rgb(223, 223, 223) 2px;
-    /* border-radius: 3px; */
 }
 
 #sizeSlider::-webkit-slider-thumb {
@@ -140,37 +101,23 @@ body {
     margin-top: -5px;
     border-radius: 50%;
     border: outset 2px rgb(114, 113, 31);
-    /* margin-top: -5px; */
     background:  rgb(165, 155, 68);
-    
-    
-
 }
-
 
 .sliderValue {
     display: flex;
     justify-content: center;
-    /* margin-top: -5px; */
-
 }
-
-
-
-
 
 .customColor {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: rgb(240, 64, 64); */
     background-color:  rgb(201, 190, 92);
     padding: 5px 5px 0px 5px;
     width: 80px;
     margin-top: 5px;
-    /* height: 50px; */
     border: outset 3px rgb(129, 128, 35);
-
 }
 
 .customValue {
@@ -192,7 +139,6 @@ body {
 #colorInputColor::-webkit-color-swatch {
     border-radius: 0px;
     border: inset 2px rgb(129, 128, 35);
-    
 }
 
 #colorInputColor::-moz-color-swatch {
@@ -204,7 +150,6 @@ body {
     display: flex;
     justify-content: center;
     width: 90px;
-
 }
 
 .contentButtons {
@@ -213,8 +158,6 @@ body {
     align-items: center;
     margin-top: 10px;
     gap: 15px;
-    /* justify-content: space-around; */
-    /* background-color: lightblue; */
     flex: 1;
 }
 
@@ -229,11 +172,21 @@ button {
     border: outset 3px rgb(129, 128, 35);
 }
 
-
 button:hover, .customColor:hover {
     background-color: rgb(175, 163, 56);
 }
 
-/* .shadow {
-    border: outset 3px rgb(129, 128, 35);
-} */
+.drawPad {
+    width: 500px;
+    height: 500px;
+    display: grid;
+    border: outset 4px rgb(129, 128, 35);
+}
+
+.drawBox {
+    display: flex;
+    background-color: whitesmoke;
+    border: 1px rgba(0, 0, 0, 0.09) solid;
+    height: auto;
+    width: auto;
+}
